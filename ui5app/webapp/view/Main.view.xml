@@ -1,0 +1,28 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="soa.poc.ui5app.controller.Main" displayBlock="true">
+
+    <Page id="main" title="{i18n>maintitle}" showFooter="false" showSubHeader="false">
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <VBox>
+                    <Label text="Some Value" labelFor="someValue" />
+                    <Input
+                        id="someValue"
+                        placeholder="Enter value to transfer to secured area">
+                    </Input>
+                </VBox>
+                <VBox width="100%" direction="Column" id="vbox01" fitContainer="true">
+                    <Text xmlns="sap.m" text="This is a unsecured page. Click Login for protected area." id="text2"/>						
+                    <Button xmlns="sap.m" text="Login" id="loginBtn" press="onLogin" type="Transparent" icon="sap-icon://sap-logo-shape"/>
+                </VBox>
+            </VBox>     
+        </content>
+    <footer>
+        <Bar id="bar0">
+            <contentRight>
+                <Button xmlns="sap.m" text="User Login" id="loginBtn3" press="onLogin"/>
+            </contentRight>
+        </Bar>
+    </footer>
+    </Page>
+
+</mvc:View>

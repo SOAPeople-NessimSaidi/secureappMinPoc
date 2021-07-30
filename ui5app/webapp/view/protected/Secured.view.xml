@@ -1,0 +1,18 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="soa.poc.ui5app.controller.protected.Secured" displayBlock="true">
+    <Page id="page" title="{i18n>titlesecured}" showNavButton="true" navButtonPress="onNavBack">
+        <content>
+            <Text xmlns="sap.m" text="This is a secured page. Logout to go back to overview." id="text2"/>	
+        </content>
+    <headerContent>
+        <Button xmlns="sap.m" text="Logout" id="LogoutBtn" activeIcon="sap-icon://log" icon="sap-icon://log" press="onLogout" />
+    </headerContent>
+    <content>
+        <VBox>
+            <Button xmlns="sap.m" text="Load Session Data" id="sessionCtxBtn" press="onLoadCtx" />
+            <Text id="ctxInfoTxt" />            
+        </VBox>
+        <VBox width="100%" height="100%" direction="Column" id="vbox02" fitContainer="true">
+        </VBox>
+    </content>
+    </Page>
+</mvc:View>

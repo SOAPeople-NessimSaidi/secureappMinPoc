@@ -1,0 +1,41 @@
+{
+    "welcomeFile": "/index.html",
+    "authenticationMethod": "route",
+    "routes": [
+        {
+            "source": "^/resources/(.*)$",
+            "target": "/resources/$1",
+            "authenticationType": "none",
+            "destination": "ui5"
+        },
+        {
+            "source": "^/test-resources/(.*)$",
+            "target": "/test-resources/$1",
+            "authenticationType": "none",
+            "destination": "ui5"
+        },
+        {
+            "source": "^/index.html#secure$",
+            "authenticationType": "xsuaa",
+            "service": "html5-apps-repo-rt",
+            "csrfProtection": false
+        },
+        {
+            "source": "^/index.html$",
+            "authenticationType": "none",
+            "service": "html5-apps-repo-rt",
+            "cacheControl": "no-cache, no-store, must-revalidate",
+            "csrfProtection": false
+        },
+        {
+            "source": "^(.*)$",
+            "target": "$1",
+            "service": "html5-apps-repo-rt",
+            "authenticationType": "none"
+        }
+    ],
+    "logout": {
+        "logoutEndpoint": "/do/logout",
+        "logoutPage": "/logout.html"
+    }
+}
